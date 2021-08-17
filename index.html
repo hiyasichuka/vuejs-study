@@ -12,9 +12,9 @@
   <script src="vue.js"></script>
 
   <div id="app">
-    <p>
-      {{message}}
-    </p>
+    <p> {{message}} </p>
+    <p>{{number +5 }}</p>
+    <p>{{ ok ? 'YES':'NO' }}</p>
     <button v-on:click="reverseMessage">
       reverse!
     </button>
@@ -24,7 +24,9 @@
     new Vue({
       el: '#app',
       data: {
-        message: 'HelloWorld!'
+        message: 'HelloWorld!',
+        number: 3,
+        ok: false
       },
       methods: {
         reverseMessage: function () {
