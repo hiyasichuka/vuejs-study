@@ -15,6 +15,7 @@
     <p> {{message}} </p>
     <p>{{number +5 }}</p>
     <p>{{ ok ? 'YES':'NO' }}</p>
+    <p>{{ sayHi() }}</p>
     <button v-on:click="reverseMessage">
       reverse!
     </button>
@@ -29,6 +30,9 @@
         ok: false
       },
       methods: {
+        sayHi: function () {
+          return 'Hi';
+        },
         reverseMessage: function () {
           this.message = this.message.split('').reverse().join('')
         }
