@@ -1,58 +1,38 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>My Vue App</title>
-  <style>
-    body {
-      display: flex;
-      flex-wrap: wrap;
-    }
-    .box {
-      width: 100px;
-      height: 100px;
-      background: skyblue;
-      cursor: pointer;
-      transition: 0.8s;
-      margin: 0 8px 8px;
-      text-align: center;
-      line-height: 100px;
-    }
-    .win {
-      background-color: pink;
-      border-radius: 50%;
-      transform: rotate(360deg);
-    }
-    .lose {
-      transform: scale(0.9);
-    }
-  </style>
-  <link rel="stylesheet" href="css/styles.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
+
 <body>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+  <div id="app">
+    <p>
+      {{message}}
+    </p>
+    <button v-on:click="reverseMessage">
+      reverse!
+    </button>
+  </div>
 
   <script>
-    'use strict';
-
-    const num = 5;
-    const winner = Math.floor(Math.random() * num); //0 - 4
-
-    for (let i=0;i<num;i++){
-      const div = document.createElement('div');
-      div.classList.add('box');
-
-      div.addEventListener('click', ()=> {
-        if (i===winner) {
-          div.textContent='Win!';
-          div.classList.add('win');
-        } else {
-          div.textContent='lose';
-          div.classList.add('lose');
+    new Vue({
+      el: '#app',
+      data: {
+        message: 'HelloWorld!'
+      },
+      methods: {
+        reverseMessage: function () {
+          this.message = this.message.split('').reverse().join('')
         }
-      });
-
-      document.body.appendChild(div);
-    }
-    </script>
+      }
+    })
+  </script>
 </body>
+
 </html>
