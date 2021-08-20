@@ -28,6 +28,7 @@
     <p>{{ ok ? 'YES':'NO' }}</p>
     <p>{{ sayHi() }}</p>
     <button v-on:click="reverseMessage"> reverse! </button>
+    <input type="text" v-on:keyup.enter.space="myAlert">
   </div>
 
   <script>
@@ -59,7 +60,8 @@
           console.log(event);
           this.x = event.clientX;
           this.y = event.clientY;
-        }
+        },
+        myAlert() { alert("アラート") }
       }
     })
   </script>
