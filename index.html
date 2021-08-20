@@ -20,6 +20,7 @@
     <a :href="url">Google</a>
     <a :[attribute]="url">Google</a>
     <p>{{number +5 }}</p>
+    <button v-on:click="countUp">Count up</button>
     <p>{{ ok ? 'YES':'NO' }}</p>
     <p>{{ sayHi() }}</p>
     <button v-on:click="reverseMessage">
@@ -32,7 +33,7 @@
       el: '#app',
       data: {
         message: 'Hello World!',
-        number: 3,
+        number: 0,
         html: '<h1>h1タグ</h1>',
         url: 'https://google.com',
         attribute: 'href',
@@ -45,6 +46,9 @@
         },
         reverseMessage: function () {
           this.message = this.message.split('').reverse().join('')
+        },
+        countUp: function () {
+          this.number++
         }
       }
     })
