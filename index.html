@@ -21,6 +21,8 @@
     <a :[attribute]="url">Google</a>
     <p>{{number +5 }}</p>
     <button v-on:click="countUp">Count up</button>
+    <p v-on:mousemove="changeMousePosition">ここにマウスを乗せると座標が表示されます。</p>
+    <p>X:{{x}},Y:{{y}}</p>
     <p>{{ ok ? 'YES':'NO' }}</p>
     <p>{{ sayHi() }}</p>
     <button v-on:click="reverseMessage">
@@ -34,6 +36,8 @@
       data: {
         message: 'Hello World!',
         number: 0,
+        x: 0,
+        y: 0,
         html: '<h1>h1タグ</h1>',
         url: 'https://google.com',
         attribute: 'href',
@@ -45,10 +49,15 @@
           return 'Hi';
         },
         reverseMessage: function () {
-          this.message = this.message.split('').reverse().join('')
+          this.message = this.message.split('').reverse().join('');
         },
         countUp: function () {
-          this.number++
+          this.number++;
+        },
+        changeMousePosition: function (event) {
+          console.log(event);
+          this.x = event.clientX;
+          this.y = event.clientY;
         }
       }
     })
