@@ -18,7 +18,7 @@
     <p>{{html}}</p>
     <p v-html="html">{{html}}</p>
     <a v-bind:href="url">Google</a>
-    <a :href="url">Google</a>
+    <a v-on:click.prevent :href="url">Google</a>
     <a :[attribute]="url">Google</a>
     <p>{{number +1 }}</p>
     <button v-on:click="countUp(2)">Count up</button>
