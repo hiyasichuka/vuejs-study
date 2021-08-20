@@ -20,7 +20,7 @@
     <a :href="url">Google</a>
     <a :[attribute]="url">Google</a>
     <p>{{number +5 }}</p>
-    <button v-on:click="countUp">Count up</button>
+    <button v-on:click="countUp(2)">Count up</button>
     <p v-on:mousemove="changeMousePosition">ここにマウスを乗せると座標が表示されます。</p>
     <p>X:{{x}},Y:{{y}}</p>
     <p>{{ ok ? 'YES':'NO' }}</p>
@@ -51,8 +51,9 @@
         reverseMessage: function () {
           this.message = this.message.split('').reverse().join('');
         },
-        countUp: function () {
+        countUp: function (times) {
           this.number++;
+          this.number *= times;
         },
         changeMousePosition: function (event) {
           console.log(event);
