@@ -12,22 +12,21 @@
   <script src="vue.js"></script>
 
   <div id="app">
-    <p V-once> {{message}} </p>
+    <p v-once> {{message}} </p>
+    <p> {{message}} </p>
     <p v-text="message"></p>
     <p>{{html}}</p>
     <p v-html="html">{{html}}</p>
     <a v-bind:href="url">Google</a>
     <a :href="url">Google</a>
     <a :[attribute]="url">Google</a>
-    <p>{{number +5 }}</p>
+    <p>{{number +1 }}</p>
     <button v-on:click="countUp(2)">Count up</button>
     <p v-on:mousemove="changeMousePosition">ここにマウスを乗せると座標が表示されます。</p>
     <p>X:{{x}},Y:{{y}}</p>
     <p>{{ ok ? 'YES':'NO' }}</p>
     <p>{{ sayHi() }}</p>
-    <button v-on:click="reverseMessage">
-      reverse!
-    </button>
+    <button v-on:click="reverseMessage"> reverse! </button>
   </div>
 
   <script>
