@@ -17,6 +17,8 @@
     <p>{{html}}</p>
     <p v-html="html">{{html}}</p>
     <a v-bind:href="url">Google</a>
+    <a :href="url">Google</a>
+    <a :[attribute]="url">Google</a>
     <p>{{number +5 }}</p>
     <p>{{ ok ? 'YES':'NO' }}</p>
     <p>{{ sayHi() }}</p>
@@ -33,6 +35,7 @@
         number: 3,
         html: '<h1>h1タグ</h1>',
         url: 'https://google.com',
+        attribute: 'href',
         ok: false
       },
       methods: {
