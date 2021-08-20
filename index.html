@@ -16,6 +16,7 @@
     <p v-text="message"></p>
     <p>{{html}}</p>
     <p v-html="html">{{html}}</p>
+    <a v-bind:href="url">Google</a>
     <p>{{number +5 }}</p>
     <p>{{ ok ? 'YES':'NO' }}</p>
     <p>{{ sayHi() }}</p>
@@ -31,6 +32,7 @@
         message: 'Hello World!',
         number: 3,
         html: '<h1>h1タグ</h1>',
+        url: 'https://google.com',
         ok: false
       },
       methods: {
