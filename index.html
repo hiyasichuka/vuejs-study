@@ -23,6 +23,7 @@
     <p>{{number +1 }}</p>
     <button v-on:click="countUp(2)">Count up</button>
     <p>{{ number > 3 ? '3以上':'3以下' }}</p>
+    <p>{{ lessThanThree }}</p>
 
     <p v-on:mousemove="changeMousePosition">ここにマウスを乗せると座標が表示されます。</p>
     <span v-on:mousemove.stop>反応しない</span>
@@ -49,6 +50,11 @@
         url: 'https://google.com',
         attribute: 'href',
         ok: false
+      },
+      computed: {
+        lessThanThree: function () {
+          return this.number > 3 ? '3以上' : '3以下'
+        }
       },
       methods: {
         sayHi: function () {
