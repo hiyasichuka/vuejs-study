@@ -29,6 +29,9 @@
     <p>{{ sayHi() }}</p>
     <button v-on:click="reverseMessage"> reverse! </button>
     <input type="text" v-on:keyup.enter.space="myAlert">
+    <br>
+    <input type="text" v-model="test">
+    <h1>{{test}}</h1>
   </div>
 
   <script>
@@ -36,6 +39,7 @@
       el: '#app',
       data: {
         message: 'Hello World!',
+        test: 'test',
         number: 0,
         x: 0,
         y: 0,
