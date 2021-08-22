@@ -22,6 +22,8 @@
     <a :[attribute]="url">Google</a>
     <p>{{number +1 }}</p>
     <button v-on:click="countUp(2)">Count up</button>
+    <p>{{ number > 3 ? '3以上':'3以下' }}</p>
+
     <p v-on:mousemove="changeMousePosition">ここにマウスを乗せると座標が表示されます。</p>
     <span v-on:mousemove.stop>反応しない</span>
     <p>X:{{x}},Y:{{y}}</p>
