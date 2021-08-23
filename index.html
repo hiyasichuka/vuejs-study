@@ -39,6 +39,8 @@
     <h1>{{test}}</h1>
     <br>
     <h1 class="red bg-blue">Hello</h1>
+    <h1 :class="{red: isActive,'bg-blue':!isActive}">Hello</h1>
+    <button @click="isActive=!isActive">切り替え</button>
   </div>
 
   <script>
@@ -53,7 +55,8 @@
         html: '<h1>h1タグ</h1>',
         url: 'https://google.com',
         attribute: 'href',
-        ok: false
+        ok: false,
+        isActive: true
       },
       computed: {
         lessThanThreeComputed: function () {
