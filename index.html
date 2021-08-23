@@ -1,96 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="css/stylesj.css">
-  <title>Document</title>
+  <title>My Vue App</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-  <script src="vue.js"></script>
 
-  <div id="app">
-    <p v-once> {{message}} </p>
-    <p> {{message}} </p>
-    <p v-text="message"></p>
-    <p>{{html}}</p>
-    <p v-html="html">{{html}}</p>
-    <a v-bind:href="url">Google</a>
-    <a v-on:click.prevent :href="url">Google</a>
-    <a :[attribute]="url">Google</a>
-    <p>{{number +1 }}</p>
-    <button v-on:click="countUp(2)">Count up</button>
-    <p>{{ number > 3 ? '3以上':'3以下' }}</p>
-    <p>{{ lessThanThreeComputed }}</p>
-    <p>{{ lessThanThreeMethod() }}</p>
-
-    <p v-on:mousemove="changeMousePosition">ここにマウスを乗せると座標が表示されます。</p>
-    <span v-on:mousemove.stop>反応しない</span>
-    <p>X:{{x}},Y:{{y}}</p>
-    <p>{{ ok ? 'YES':'NO' }}</p>
-    <p>{{ sayHi() }}</p>
-    <button v-on:click="reverseMessage"> reverse! </button>
-    <input type="text" v-on:keyup.enter.space="myAlert">
-    <br>
-    <input type="text" v-model="test">
-    <h1>{{test}}</h1>
-    <br>
-    <h1 class="red bg-blue">Hello</h1>
-    <h1 :class="{red: isActive,'bg-blue':!isActive}">Hello</h1>
-    <h1 :class="classObj">Hello</h1>
-    <button @click="isActive=!isActive">切り替え</button>
+  <div id="app" class="container">
+    <h1>
+      My Todos
+      <span class="info">({{ remaining }}/{{ todos.length }})</span>
+    </h1>
+    <ul>
+      <li v-for="(todo, index) in todos">
+        <input type="checkbox" v-model="todo.isDone">
+        <span :class="{done: todo.isDone}">{{ todo.title }}</span>
+        <span @click="deleteItem(index)" class="command">[x]</span>
+      </li>
+      <li v-show="!todos.length">Nothing to do, yay!</li>
+    </ul>
+    <form @submit.prevent="addItem">
+      <input type="text" v-model="newItem">
+      <input type="submit" value="Add">
+    </form>
   </div>
 
-  <script>
-    new Vue({
-      el: '#app',
-      data: {
-        message: 'Hello World!',
-        test: 'test',
-        number: 0,
-        x: 0,
-        y: 0,
-        html: '<h1>h1タグ</h1>',
-        url: 'https://google.com',
-        attribute: 'href',
-        ok: false,
-        isActive: true
-      },
-      computed: {
-        classObj: function () {
-          return { red: this.isActive, 'bg-blue': !this.isActive }
-        },
-        lessThanThreeComputed: function () {
-          return this.number > 3 ? '3以上' : '3以下'
-        }
-      },
-      methods: {
-        lessThanThreeMethod: function () {
-          return this.number > 3 ? '3以上' : '3以下'
-        },
-        sayHi: function () {
-          this.message = "Hello VueJS"
-          return 'Hi';
-        },
-        reverseMessage: function () {
-          this.test = this.test.split('').reverse().join('');
-        },
-        countUp: function (times) {
-          this.number++;
-          this.number *= times;
-        },
-        changeMousePosition: function (event) {
-          console.log(event);
-          this.x = event.clientX;
-          this.y = event.clientY;
-        },
-        myAlert() { alert("アラート") }
-      }
-    })
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>

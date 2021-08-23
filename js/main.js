@@ -1,21 +1,43 @@
-(function() {
-    'use strict';
-    console.log("hello");
-    console.log(150*1279);
-    console.log(150*129);
-  // 
-    let price = 150
-    console.log(price*1279);
-    console.log(price*129);
-    price = 180
-    console.log(price*1279);
-    console.log(price*129);
+(function () {
+  'use strict';
 
-    // // two way data binding (to UI)  
-    // var vm = new Vue({
-    //   el: '#app',
-    //   data: {
-    //     name: '名前'
-    //   }
-    // });
-  })();
+  var vm = new Vue({
+    el: '#app',
+    data: {
+      newItem: '',
+      todos: [{
+        title: 'task 1',
+        isDone: false
+      }, {
+        title: 'task 2',
+        isDone: false
+      }, {
+        title: 'task 3',
+        isDone: true
+      }]
+    },
+    methods: {
+      addItem: function () {
+        var item = {
+          title: this.newItem,
+          isDone: false
+        };
+        this.todos.push(item);
+        this.newItem = '';
+      },
+      deleteItem: function (index) {
+        if (confirm('are you sure?')) {
+          this.todos.splice(index, 1);
+        }
+      }
+    },
+    computed: {
+      remaining: function () {
+        var items = this.todos.filter(function (todo) {
+          return !todo.isDone;
+        });
+        return items.length;
+      }
+    }
+  });
+})();
