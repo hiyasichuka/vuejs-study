@@ -40,6 +40,7 @@
     <br>
     <h1 class="red bg-blue">Hello</h1>
     <h1 :class="{red: isActive,'bg-blue':!isActive}">Hello</h1>
+    <h1 :class="classObj">Hello</h1>
     <button @click="isActive=!isActive">切り替え</button>
   </div>
 
@@ -59,6 +60,9 @@
         isActive: true
       },
       computed: {
+        classObj: function () {
+          return { red: this.isActive, 'bg-blue': !this.isActive }
+        },
         lessThanThreeComputed: function () {
           return this.number > 3 ? '3以上' : '3以下'
         }
