@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>My Vue App</title>
+  <title>Vue.jsアプリ</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -11,7 +11,7 @@
 
   <div id="app" class="container">
     <h1>
-      <button @click="purge">Todoを削除する</button>
+      <button @click="purge">完了済を削除する</button>
       Todoリスト
       <span class="info">({{ remaining.length }}/{{ todos.length }})</span>
     </h1>
@@ -29,7 +29,7 @@
     </form>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
   <script src="js/main.js"></script>
 </body>
 
