@@ -28,17 +28,14 @@
         this.newItem = '';
       },
       deleteItem: function (index) {
-        if (confirm('are you sure?')) {
+        if (confirm('削除してもよろしいですか?')) {
           this.todos.splice(index, 1);
         }
       },
       purge: function () {
-        if (!confirm('delete finished?')) {
+        if (!confirm('削除してもよろしいですか?')) {
           return;
         }
-        // this.todos = this.todos.filter(function(todo) {
-        //   return !todo.isDone;
-        // });
         this.todos = this.remaining;
       }
     },
