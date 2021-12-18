@@ -36,7 +36,7 @@
           <nuxt-link
             class="text-teal-600 hover:underline"
             to="/de/blog">
-            German
+            Japanese
           </nuxt-link>
         </li>
       </ul>
