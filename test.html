@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang='ja'>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-COmpatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width", initial-scale=1.0>
+    <title>Vue3</title>
+    <script src="https://unpkg.com/vue@next"></script>
+  </head>
+
+  <body>
+    <div id="app">
+      {{ msg }}
+    </div>
+
+    <div class="c">
+      Counter:{{ counter }}
+    </div>
+
+    <script>
+      const appdata = {
+        data() {
+          return {
+            msg: "hello world"
+          }
+        }
+      }
+
+      const Counter = {
+        data() {
+          return {
+            counter: 99
+            }
+        },
+        mounted() {
+          setInterval(() => {
+            this.counter++
+          }, 1)
+        }
+      }
+
+      Vue.createApp(appdata).mount('#app')
+      Vue.createApp(Counter).mount('.c')
+
+    </script>
+
+  </body>
+
+</html>
