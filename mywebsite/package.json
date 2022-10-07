@@ -20,7 +20,7 @@
     "webpack": "5.74.0"
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "5.3.3",
+    "@nuxtjs/tailwindcss": "5.3.5",
     "postcss": "8.4.16"
   }
 }
