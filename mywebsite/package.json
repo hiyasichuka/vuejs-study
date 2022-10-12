@@ -12,7 +12,7 @@
     "axios": "1.1.1",
     "core-js": "3.25.5",
     "nuxt": "2.15.8",
-    "storyblok-js-client": "4.5.7",
+    "storyblok-js-client": "4.5.8",
     "storyblok-nuxt": "2.0.1",
     "vue": "3.2.40",
     "vue-server-renderer": "2.7.10",
