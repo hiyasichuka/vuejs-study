@@ -8666,10 +8666,10 @@ std-env@^3.3.0:
   resolved "https://registry.yarnpkg.com/std-env/-/std-env-3.3.0.tgz#86b5b5d416c5744b3fdeac6893c2b98196fc1a55"
   integrity sha512-cNNS+VYsXIs5gI6gJipO4qZ8YYT274JHvNnQ1/R/x8Q8mdP0qj0zoMchRXmBNPqp/0eOEhX+3g7g6Fgb7meLIQ==
 
-storyblok-js-client@5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/storyblok-js-client/-/storyblok-js-client-5.0.0.tgz#a30f292f70351431f781da81118a934c8ab616f1"
-  integrity sha512-VNujWv825yIBrjcKgHfT841pitcAWR+RaqE3kDzcApLawjz2VnPanIwyFLLIt40MhcXfiyJ8TRiU+ZJz3DlqKA==
+storyblok-js-client@5.0.3:
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/storyblok-js-client/-/storyblok-js-client-5.0.3.tgz#80f7253d21465e681244ba8337c22091bf09f8a1"
+  integrity sha512-JmOH+SzVZOoJbj2K6Ktk8Zi8KPZfS44SR2tbhbe28aQ6Vx899wIoYMJLenIe/3AeSSERcCXKIgQHj+cNpaFwKA==
   dependencies:
     isomorphic-fetch "^3.0.0"
 
