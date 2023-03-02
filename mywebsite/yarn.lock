@@ -5455,10 +5455,10 @@ std-env@^3.3.2:
   resolved "https://registry.yarnpkg.com/std-env/-/std-env-3.3.2.tgz#af27343b001616015534292178327b202b9ee955"
   integrity sha512-uUZI65yrV2Qva5gqE0+A7uVAvO40iPo6jGhs7s8keRfHCmtg+uB2X6EiLGCI9IgL1J17xGhvoOqSz79lzICPTA==
 
-storyblok-js-client@5.5.0:
-  version "5.5.0"
-  resolved "https://registry.yarnpkg.com/storyblok-js-client/-/storyblok-js-client-5.5.0.tgz#99184bb69c5d90f960a8c8b28c3dcb0a653fc4ef"
-  integrity sha512-niHoYay/TrD00Dqdhvrbgh/ZlPa2qcMQ7exHg9jQSwGZTM/c3fiR6OKPZNhpKuuMiQkSVzeFHw880nM97NQ34g==
+storyblok-js-client@5.5.1:
+  version "5.5.1"
+  resolved "https://registry.yarnpkg.com/storyblok-js-client/-/storyblok-js-client-5.5.1.tgz#803b56af4156adc53f79af8c5bd5ef7c2886f774"
+  integrity sha512-KXJnYE03iYz3NGC6/cJdjksqvthUSA3rlbSU9Lj0smOaXcPMiU+VTTN3wWWr9okWQtLfyQs2VEw5Z2CPcgxMvQ==
 
 storyblok-js-client@^4.0.3:
   version "4.1.5"
